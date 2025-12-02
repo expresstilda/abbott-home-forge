@@ -340,6 +340,40 @@ export default function Product() {
           </p>
         </section>
 
+        {/* Marketplace Reviews */}
+        <section className="mb-16">
+          <h2 className="section-title">Отзывы с маркетплейсов</h2>
+          <p className="text-muted-foreground mb-6">
+            Скриншоты реальных отзывов покупателей с Ozon и Wildberries. Эти отзывы не учитываются в общем рейтинге товара на сайте.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { platform: "Ozon", index: 1 },
+              { platform: "Ozon", index: 2 },
+              { platform: "Wildberries", index: 1 },
+              { platform: "Wildberries", index: 2 },
+              { platform: "Ozon", index: 3 },
+              { platform: "Wildberries", index: 3 },
+            ].map((review, i) => (
+              <div key={i} className="bg-card rounded-xl border border-border overflow-hidden">
+                <div className="aspect-[4/3] bg-secondary">
+                  <img
+                    src="/placeholder.svg"
+                    alt={`Отзыв с ${review.platform}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-3 flex items-center justify-between">
+                  <span className={`text-sm font-medium ${review.platform === "Ozon" ? "text-blue-600" : "text-purple-600"}`}>
+                    {review.platform}
+                  </span>
+                  <span className="text-xs text-muted-foreground">Скриншот отзыва</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Related Products */}
         {relatedProducts.length > 0 && (
           <section className="mb-16">
