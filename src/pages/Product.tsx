@@ -7,7 +7,7 @@ import { useCart } from "@/lib/cart";
 import { useFavorites } from "@/lib/favorites";
 import { Heart, ShoppingCart, Truck, Shield, MapPin, Star, Minus, Plus } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { cn, assetUrl } from "@/lib/utils";
+import { cn, BASE_PATH } from "@/lib/utils";
 
 export default function Product() {
   const { slug } = useParams();
@@ -78,7 +78,7 @@ export default function Product() {
           <div className="space-y-4">
             <div className="aspect-square bg-secondary rounded-xl overflow-hidden">
               <img
-                src={assetUrl(product.images[0])}
+                src={`${BASE_PATH}${product.images[0].replace(/^\//, '')}`}
                 alt={product.name}
                 className="w-full h-full object-cover"
               />
@@ -90,7 +90,7 @@ export default function Product() {
                   className="aspect-square bg-secondary rounded-lg overflow-hidden border-2 border-transparent hover:border-primary transition-colors"
                 >
                   <img
-                    src={assetUrl(product.images[0])}
+                    src={`${BASE_PATH}${product.images[0].replace(/^\//, '')}`}
                     alt={`${product.name} - фото ${i}`}
                     className="w-full h-full object-cover"
                   />
@@ -358,7 +358,7 @@ export default function Product() {
               <div key={i} className="bg-card rounded-xl border border-border overflow-hidden">
                 <div className="aspect-[4/3] bg-secondary">
                   <img
-                    src={assetUrl("placeholder.svg")}
+                    src={`${BASE_PATH}placeholder.svg`}
                     alt={`Отзыв с ${review.platform}`}
                     className="w-full h-full object-cover"
                   />
