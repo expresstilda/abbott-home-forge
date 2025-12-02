@@ -59,8 +59,8 @@ export default function Index() {
                 Стильные зеркала и системы хранения для дома от производителя
               </h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Более 25 лет мы производим торговое оборудование для России, СНГ, Европы и Америки. 
-                Теперь весь наш профессиональный опыт — в мебели и товарах для вашего дома.
+                Мы — производители с 25-летним опытом. Делаем прочную, красивую мебель 
+                для хранения и знаем, как сделать её удобной в повседневной жизни.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
                 <Link to="/catalog" className="btn-primary text-center">
