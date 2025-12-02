@@ -286,12 +286,12 @@ export const discountedProducts: Product[] = [
 
 export const categories = [
   { name: "Все", slug: "all" },
-  { name: "Зеркала", slug: "zerkala" },
-  { name: "Вешалки", slug: "veshalki" },
-  { name: "Стеллажи", slug: "stellazhi" },
+  { name: "Зеркала напольные", slug: "zerkala-napolnye" },
+  { name: "Зеркала настенные", slug: "zerkala-nastennye" },
+  { name: "Вешалки напольные", slug: "veshalki-napolnye" },
   { name: "Системы хранения", slug: "sistemy-hraneniya" },
-  { name: "Банкетки и пуфы", slug: "banketki" },
-  { name: "Аксессуары", slug: "aksessuary" },
+  { name: "Журнальные столики", slug: "zhurnalnye-stoliki" },
+  { name: "Этажерки", slug: "etazherki" },
 ];
 
 export const rooms = [
