@@ -159,6 +159,7 @@ export const products: Product[] = [
     dimensions: "40×33×126 см",
     weight: "10 кг",
     inStock: true,
+    isHit: true,
     rating: 4.6,
     reviewsCount: 78,
     specifications: {
