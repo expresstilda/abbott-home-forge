@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { ProductCard } from "@/components/ProductCard";
 import { products, discountedProducts } from "@/lib/products";
+import { assetUrl } from "@/lib/utils";
 import { 
   Factory, 
   Truck, 
@@ -81,7 +82,7 @@ export default function Index() {
             <div className="relative lg:h-[500px] animate-fade-in">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl" />
               <img
-                src="/placeholder.svg"
+                src={assetUrl("placeholder.svg")}
                 alt="Интерьер с мебелью ABBOTT HOME"
                 className="w-full h-full object-cover rounded-2xl"
               />
@@ -112,7 +113,7 @@ export default function Index() {
                 className="group relative aspect-[4/3] bg-secondary rounded-xl overflow-hidden"
               >
                 <img
-                  src="/placeholder.svg"
+                  src={assetUrl("placeholder.svg")}
                   alt={cat.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />

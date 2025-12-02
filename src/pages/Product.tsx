@@ -7,7 +7,7 @@ import { useCart } from "@/lib/cart";
 import { useFavorites } from "@/lib/favorites";
 import { Heart, ShoppingCart, Truck, Shield, MapPin, Star, Minus, Plus } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { cn } from "@/lib/utils";
+import { cn, assetUrl } from "@/lib/utils";
 
 export default function Product() {
   const { slug } = useParams();
@@ -78,7 +78,7 @@ export default function Product() {
           <div className="space-y-4">
             <div className="aspect-square bg-secondary rounded-xl overflow-hidden">
               <img
-                src={product.images[0]}
+                src={assetUrl(product.images[0])}
                 alt={product.name}
                 className="w-full h-full object-cover"
               />
@@ -90,7 +90,7 @@ export default function Product() {
                   className="aspect-square bg-secondary rounded-lg overflow-hidden border-2 border-transparent hover:border-primary transition-colors"
                 >
                   <img
-                    src={product.images[0]}
+                    src={assetUrl(product.images[0])}
                     alt={`${product.name} - фото ${i}`}
                     className="w-full h-full object-cover"
                   />
@@ -358,7 +358,7 @@ export default function Product() {
               <div key={i} className="bg-card rounded-xl border border-border overflow-hidden">
                 <div className="aspect-[4/3] bg-secondary">
                   <img
-                    src="/placeholder.svg"
+                    src={assetUrl("placeholder.svg")}
                     alt={`Отзыв с ${review.platform}`}
                     className="w-full h-full object-cover"
                   />
