@@ -29,14 +29,6 @@ export function Header() {
             </span>
           </Link>
 
-          {/* Phone - Desktop */}
-          <a
-            href="tel:+74959894212"
-            className="hidden lg:flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            +7 (495) 989-42-12
-          </a>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
@@ -48,10 +40,17 @@ export function Header() {
                 {link.name}
               </Link>
             ))}
+            {/* Phone */}
+            <a
+              href="tel:+74959894212"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              +7 (495) 989-42-12
+            </a>
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-2">
             {/* Search */}
             <div className="relative">
               {isSearchOpen ? (
