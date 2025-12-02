@@ -13,6 +13,7 @@ export function Header() {
   const navLinks = [
     { name: "Каталог", href: "/catalog" },
     { name: "Выгодное предложение", href: "/vygodnoe-predlozhenie" },
+    { name: "HoReCa", href: "/horeca" },
     { name: "О компании", href: "/about" },
     { name: "Контакты", href: "/contacts" },
   ];
