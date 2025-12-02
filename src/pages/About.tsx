@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
+import { assetUrl } from "@/lib/utils";
 import { 
   Factory, 
   Award, 
@@ -100,7 +101,7 @@ export default function About() {
             </div>
             <div className="aspect-video bg-muted rounded-xl overflow-hidden">
               <img
-                src="/placeholder.svg"
+                src={assetUrl("placeholder.svg")}
                 alt="Производство ABBOTT HOME"
                 className="w-full h-full object-cover"
               />
@@ -176,7 +177,7 @@ export default function About() {
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="aspect-square bg-muted rounded-lg overflow-hidden">
                 <img
-                  src="/placeholder.svg"
+                  src={assetUrl("placeholder.svg")}
                   alt={`Производство ${i}`}
                   className="w-full h-full object-cover"
                 />

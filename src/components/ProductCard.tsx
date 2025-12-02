@@ -3,7 +3,7 @@ import { Heart, ShoppingCart } from "lucide-react";
 import { Product } from "@/lib/products";
 import { useCart } from "@/lib/cart";
 import { useFavorites } from "@/lib/favorites";
-import { cn } from "@/lib/utils";
+import { cn, assetUrl } from "@/lib/utils";
 
 interface ProductCardProps {
   product: Product;
@@ -39,7 +39,7 @@ export function ProductCard({ product, variant = "default" }: ProductCardProps) 
       {/* Image Container */}
       <div className="relative aspect-square bg-secondary overflow-hidden">
         <img
-          src={product.images[0]}
+          src={assetUrl(product.images[0])}
           alt={product.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
