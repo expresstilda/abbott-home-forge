@@ -12,9 +12,7 @@ export function Header() {
 
   const navLinks = [
     { name: "Каталог", href: "/catalog" },
-    { name: "Коллекции", href: "/catalog" },
     { name: "О проекте", href: "/about" },
-    { name: "Где купить", href: "/contacts" },
     { name: "Контакты", href: "/contacts" },
   ];
 

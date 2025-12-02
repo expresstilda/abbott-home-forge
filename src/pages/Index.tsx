@@ -1,17 +1,14 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { ProductCard } from "@/components/ProductCard";
-import { products, discountedProducts, collections, rooms, categories } from "@/lib/products";
+import { products, discountedProducts } from "@/lib/products";
 import { 
-  ChevronRight, 
   Factory, 
   Truck, 
   Shield, 
   Settings,
   Star,
-  ChevronDown
 } from "lucide-react";
-import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -20,10 +17,7 @@ import {
 } from "@/components/ui/accordion";
 
 export default function Index() {
-  const [selectedRoom, setSelectedRoom] = useState("Прихожая");
   const hitProducts = products.filter((p) => p.isHit);
-
-  const roomProducts = products.filter((p) => p.rooms.includes(selectedRoom));
 
   const faqItems = [
     {
@@ -96,10 +90,10 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Popular Categories */}
+      {/* Categories */}
       <section className="py-16 md:py-24">
         <div className="container-custom">
-          <h2 className="section-title text-center">Популярные категории</h2>
+          <h2 className="section-title text-center">Категории</h2>
           <p className="section-subtitle text-center max-w-2xl mx-auto">
             Выберите нужную категорию товаров для вашего интерьера
           </p>
@@ -130,85 +124,6 @@ export default function Index() {
                   <p className="text-sm text-background/80">{cat.desc}</p>
                 </div>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Collections */}
-      <section className="py-16 md:py-24 bg-secondary">
-        <div className="container-custom">
-          <h2 className="section-title text-center">Коллекции ABBOTT HOME</h2>
-          <p className="section-subtitle text-center max-w-2xl mx-auto">
-            Подберите готовое решение для своего интерьера
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {collections.map((collection) => (
-              <div
-                key={collection.slug}
-                className="bg-card rounded-xl overflow-hidden shadow-soft"
-              >
-                <div className="aspect-[3/2] bg-muted">
-                  <img
-                    src="/placeholder.svg"
-                    alt={collection.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-serif font-semibold text-xl mb-2">
-                    {collection.name}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {collection.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {collection.items.map((item) => (
-                      <span
-                        key={item}
-                        className="px-2 py-1 text-xs bg-secondary rounded-full text-secondary-foreground"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                  <Link
-                    to={`/catalog/${collection.slug}`}
-                    className="inline-flex items-center text-sm font-medium text-primary hover:text-olive-dark"
-                  >
-                    Смотреть коллекцию
-                    <ChevronRight className="h-4 w-4 ml-1" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Room Solutions */}
-      <section className="py-16 md:py-24">
-        <div className="container-custom">
-          <h2 className="section-title text-center">Решения для разных помещений</h2>
-          <p className="section-subtitle text-center max-w-2xl mx-auto">
-            Подберите мебель под конкретное помещение
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
-            {rooms.map((room) => (
-              <button
-                key={room}
-                onClick={() => setSelectedRoom(room)}
-                className={`chip ${selectedRoom === room ? "chip-active" : ""}`}
-              >
-                {room}
-              </button>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {roomProducts.slice(0, 4).map((product) => (
-              <ProductCard key={product.id} product={product} />
             ))}
           </div>
         </div>
@@ -320,45 +235,6 @@ export default function Index() {
           <p className="text-center text-sm text-muted-foreground mt-6">
             Отзывы с маркетплейсов показаны в виде скриншотов и не учитываются в общем рейтинге товара на сайте.
           </p>
-        </div>
-      </section>
-
-      {/* Where to Buy */}
-      <section className="py-16 md:py-24 bg-secondary">
-        <div className="container-custom">
-          <h2 className="section-title text-center">Где купить ABBOTT HOME</h2>
-          <div className="grid md:grid-cols-2 gap-8 mt-10 max-w-3xl mx-auto">
-            <div className="bg-card p-8 rounded-xl text-center">
-              <h3 className="font-serif font-semibold text-xl mb-4">
-                Официальный интернет-магазин
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Полный ассортимент, актуальные цены и прямая гарантия от производителя
-              </p>
-              <Link to="/catalog" className="btn-primary">
-                Перейти в каталог
-              </Link>
-            </div>
-            <div className="bg-card p-8 rounded-xl text-center">
-              <h3 className="font-serif font-semibold text-xl mb-4">
-                Маркетплейсы
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Покупайте там, где вам удобно — Ozon, Wildberries или Avito
-              </p>
-              <div className="flex justify-center gap-3">
-                {["Ozon", "WB", "Avito"].map((mp) => (
-                  <a
-                    key={mp}
-                    href="#"
-                    className="px-4 py-2 text-sm font-medium border border-border rounded-md hover:bg-secondary transition-colors"
-                  >
-                    {mp}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
