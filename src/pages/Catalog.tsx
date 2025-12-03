@@ -82,15 +82,26 @@ export default function Catalog() {
           </p>
         </div>
 
-        {/* Category Chips */}
-        <div className="flex flex-wrap gap-2 mb-8">
+        {/* Category Chips with Thumbnails */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-8">
           {categories.map((cat) => (
             <button
               key={cat.slug}
               onClick={() => setSelectedCategory(cat.slug)}
-              className={`chip ${selectedCategory === cat.slug ? "chip-active" : ""}`}
+              className={`flex items-center gap-3 px-4 py-3 rounded-lg border transition-all text-left ${
+                selectedCategory === cat.slug 
+                  ? "border-primary bg-primary/5" 
+                  : "border-border bg-card hover:border-primary/50"
+              }`}
             >
-              {cat.name}
+              <div className="w-10 h-10 rounded-full bg-secondary flex-shrink-0 overflow-hidden">
+                <img 
+                  src={cat.thumbnail} 
+                  alt={cat.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span className="text-sm font-medium text-foreground">{cat.name}</span>
             </button>
           ))}
         </div>

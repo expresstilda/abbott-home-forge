@@ -286,13 +286,13 @@ export const discountedProducts: Product[] = [
 ];
 
 export const categories = [
-  { name: "Все", slug: "all" },
-  { name: "Зеркала напольные", slug: "zerkala-napolnye" },
-  { name: "Зеркала настенные", slug: "zerkala-nastennye" },
-  { name: "Вешалки напольные", slug: "veshalki-napolnye" },
-  { name: "Системы хранения", slug: "sistemy-hraneniya" },
-  { name: "Журнальные столики", slug: "zhurnalnye-stoliki" },
-  { name: "Этажерки", slug: "etazherki" },
+  { name: "Все", slug: "all", thumbnail: "/placeholder.svg" },
+  { name: "Зеркала напольные", slug: "zerkala-napolnye", thumbnail: "/placeholder.svg" },
+  { name: "Зеркала настенные", slug: "zerkala-nastennye", thumbnail: "/placeholder.svg" },
+  { name: "Вешалки напольные", slug: "veshalki-napolnye", thumbnail: "/placeholder.svg" },
+  { name: "Системы хранения", slug: "sistemy-hraneniya", thumbnail: "/placeholder.svg" },
+  { name: "Журнальные столики", slug: "zhurnalnye-stoliki", thumbnail: "/placeholder.svg" },
+  { name: "Этажерки", slug: "etazherki", thumbnail: "/placeholder.svg" },
 ];
 
 export const rooms = [
