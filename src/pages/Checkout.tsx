@@ -10,6 +10,7 @@ export default function Checkout() {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [deliveryMethod, setDeliveryMethod] = useState<"cdek" | "pickup">("cdek");
+  const [paymentMethod, setPaymentMethod] = useState<"card" | "invoice">("card");
   const [orderPlaced, setOrderPlaced] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -268,16 +269,48 @@ export default function Checkout() {
             {step === 3 && (
               <div className="bg-card p-6 rounded-xl border border-border">
                 <h2 className="font-semibold text-lg mb-6">Способ оплаты</h2>
-                <label className="flex items-start gap-4 p-4 border border-primary bg-primary/5 rounded-xl">
-                  <input type="radio" name="payment" defaultChecked className="mt-1" />
-                  <div>
-                    <span className="font-medium">Онлайн-оплата банковской картой</span>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      Оплата происходит через защищённый сервис Робокасса. 
-                      Мы не храним данные вашей карты.
-                    </p>
-                  </div>
-                </label>
+                <div className="space-y-4">
+                  <label
+                    className={`flex items-start gap-4 p-4 border rounded-xl cursor-pointer transition-colors ${
+                      paymentMethod === "card" ? "border-primary bg-primary/5" : "border-border"
+                    }`}
+                  >
+                    <input
+                      type="radio"
+                      name="payment"
+                      checked={paymentMethod === "card"}
+                      onChange={() => setPaymentMethod("card")}
+                      className="mt-1"
+                    />
+                    <div>
+                      <span className="font-medium">Онлайн-оплата банковской картой</span>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        Оплата происходит через защищённый сервис Робокасса. 
+                        Мы не храним данные вашей карты.
+                      </p>
+                    </div>
+                  </label>
+
+                  <label
+                    className={`flex items-start gap-4 p-4 border rounded-xl cursor-pointer transition-colors ${
+                      paymentMethod === "invoice" ? "border-primary bg-primary/5" : "border-border"
+                    }`}
+                  >
+                    <input
+                      type="radio"
+                      name="payment"
+                      checked={paymentMethod === "invoice"}
+                      onChange={() => setPaymentMethod("invoice")}
+                      className="mt-1"
+                    />
+                    <div>
+                      <span className="font-medium">Выставить счёт для оплаты</span>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        Мы отправим счёт на ваш email. Оплата по реквизитам для физических и юридических лиц.
+                      </p>
+                    </div>
+                  </label>
+                </div>
                 <div className="flex gap-3 mt-6">
                   <button onClick={() => setStep(2)} className="btn-secondary">
                     Назад
