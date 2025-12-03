@@ -83,7 +83,7 @@ export function Footer() {
 
             <h4 className="font-semibold mb-3">Мы на маркетплейсах</h4>
             <div className="flex items-center gap-3">
-              {["Ozon", "WB", "Avito"].map((name) => (
+              {["Ozon", "WB", "Яндекс.Маркет"].map((name) => (
                 <a
                   key={name}
                   href="#"
