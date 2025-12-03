@@ -41,6 +41,7 @@ export default function Contacts() {
     { name: "Официальный магазин", href: "/catalog", button: "Перейти в каталог" },
     { name: "Ozon", href: "https://ozon.ru", button: "Смотреть на Ozon" },
     { name: "Wildberries", href: "https://wildberries.ru", button: "Смотреть на WB" },
+    { name: "Яндекс.Маркет", href: "https://market.yandex.ru", button: "Смотреть на Яндекс.Маркете" },
   ];
 
   return (
@@ -156,7 +157,7 @@ export default function Contacts() {
           <p className="text-muted-foreground mb-6">
             Покупайте там, где вам удобно — в нашем официальном магазине или на маркетплейсах
           </p>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {marketplaces.map((mp) => (
               <div
                 key={mp.name}
