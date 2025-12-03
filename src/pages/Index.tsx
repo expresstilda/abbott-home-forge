@@ -239,19 +239,13 @@ export default function Index() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 md:py-24 bg-primary text-primary-foreground">
+      <section className="py-12 md:py-16 bg-primary">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4">
-            Готовы обновить дом?
-          </h2>
-          <p className="text-lg opacity-90 mb-8 max-w-xl mx-auto">
-            Выберите стильные и функциональные решения для хранения от ABBOTT HOME
-          </p>
           <Link
             to="/catalog"
             className="inline-block px-8 py-4 bg-background text-foreground font-medium rounded-md hover:bg-background/90 transition-colors"
           >
-            Выбрать решение для своего интерьера
+            Перейти в каталог
           </Link>
         </div>
       </section>
