@@ -6,7 +6,6 @@ import { discountedProducts } from "@/lib/products";
 
 export default function DiscountedProducts() {
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [selectedReason, setSelectedReason] = useState("all");
 
   const categories = [
     { name: "Все", slug: "all" },
@@ -15,20 +14,8 @@ export default function DiscountedProducts() {
     { name: "Стеллажи", slug: "stellazhi" },
   ];
 
-  const reasons = [
-    { name: "Все", slug: "all" },
-    { name: "Выставочный образец", slug: "Выставочный образец" },
-    { name: "Царапина", slug: "царапина" },
-    { name: "Остаток серии", slug: "Остаток серии" },
-  ];
-
   const filteredProducts = discountedProducts.filter((p) => {
-    const categoryMatch =
-      selectedCategory === "all" || p.categorySlug === selectedCategory;
-    const reasonMatch =
-      selectedReason === "all" ||
-      p.discountReason?.toLowerCase().includes(selectedReason.toLowerCase());
-    return categoryMatch && reasonMatch;
+    return selectedCategory === "all" || p.categorySlug === selectedCategory;
   });
 
   return (
@@ -53,34 +40,18 @@ export default function DiscountedProducts() {
         </div>
 
         {/* Filters */}
-        <div className="mb-8 space-y-4">
-          <div>
-            <h3 className="text-sm font-medium mb-2">Категория</h3>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((cat) => (
-                <button
-                  key={cat.slug}
-                  onClick={() => setSelectedCategory(cat.slug)}
-                  className={`chip ${selectedCategory === cat.slug ? "chip-active" : ""}`}
-                >
-                  {cat.name}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h3 className="text-sm font-medium mb-2">Причина уценки</h3>
-            <div className="flex flex-wrap gap-2">
-              {reasons.map((reason) => (
-                <button
-                  key={reason.slug}
-                  onClick={() => setSelectedReason(reason.slug)}
-                  className={`chip ${selectedReason === reason.slug ? "chip-active" : ""}`}
-                >
-                  {reason.name}
-                </button>
-              ))}
-            </div>
+        <div className="mb-8">
+          <h3 className="text-sm font-medium mb-2">Категория</h3>
+          <div className="flex flex-wrap gap-2">
+            {categories.map((cat) => (
+              <button
+                key={cat.slug}
+                onClick={() => setSelectedCategory(cat.slug)}
+                className={`chip ${selectedCategory === cat.slug ? "chip-active" : ""}`}
+              >
+                {cat.name}
+              </button>
+            ))}
           </div>
         </div>
 
