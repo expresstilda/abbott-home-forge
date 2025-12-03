@@ -51,18 +51,14 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="animate-slide-up">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground leading-tight mb-6">
-                Стильные зеркала и системы хранения для дома от производителя
+                Коллекции стильных, качественных предметов мебели и товаров для дома по оптимальной цене
               </h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Мы — производители с 25-летним опытом. Делаем прочную, красивую мебель 
-                для хранения и знаем, как сделать её удобной в повседневной жизни.
+                Более 25 лет мы производим товары для России, стран СНГ, Европы и Америки
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
                 <Link to="/catalog" className="btn-primary text-center">
                   Перейти в каталог
-                </Link>
-                <Link to="/catalog" className="btn-secondary text-center">
-                  Посмотреть коллекции
                 </Link>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -170,37 +166,21 @@ export default function Index() {
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container-custom">
           <h2 className="section-title text-center">Производство и качество</h2>
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mt-10">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mt-10 items-center">
             <div>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Компания ABBOTT (ПК Поливер) более 25 лет производит торговое оборудование, 
-                экономпанели и комплексные решения для магазинов. Наш завод расположен в 
-                Московской области и оснащён современным европейским оборудованием.
+                Компания ABBOTT более 25 лет производит торговое оборудование, экономпанели и комплексные решения для магазинов. Наш завод расположен в Московской области и оснащён современным европейским оборудованием.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Мы работаем с крупнейшими торговыми сетями России и экспортируем продукцию 
-                в страны СНГ, Европы и Америки. Теперь весь этот опыт и технологии мы 
-                используем для создания мебели и товаров для дома под брендом ABBOTT HOME.
+                Мы работаем с крупнейшими торговыми сетями России и экспортируем продукцию в страны СНГ, Европы и Америки. Теперь весь этот опыт и технологии мы используем для создания мебели и товаров для дома под брендом ABBOTT HOME. Мы располагаем самым современным оборудованием.
               </p>
             </div>
-            <div className="space-y-4">
-              {[
-                { name: "Деревообрабатывающие центры с ЧПУ", benefit: "Точная геометрия каждой детали" },
-                { name: "Кромкооблицовочные станки", benefit: "Ровная и аккуратная кромка без сколов" },
-                { name: "Лазерная резка металла", benefit: "Аккуратный металлокаркас" },
-                { name: "Линия порошковой покраски", benefit: "Прочное и долговечное покрытие" },
-                { name: "Участок обработки зеркал", benefit: "Безопасные зеркальные поверхности" },
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4 p-4 bg-card rounded-lg">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Settings className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-foreground">{item.name}</h4>
-                    <p className="text-sm text-muted-foreground">{item.benefit}</p>
-                  </div>
-                </div>
-              ))}
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+              <img
+                src={`${BASE_PATH}placeholder.svg`}
+                alt="Производство ABBOTT HOME"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
