@@ -31,8 +31,9 @@ export default function Contacts() {
   const warehouses = [
     {
       name: "Основной склад",
-      address: "Московская область, г. Подольск, ул. Промышленная, 5",
-      hours: "Пн–Пт: 9:00–18:00",
+      address: "тер. ПромСтрой, д. 1, стр. 1, д. Отрада, г.о. Клин, МО, 141663",
+      phone: "+7 (495) 989-42-12",
+      hours: "с 9:00 до 17:00",
       note: "Самовывоз по предварительному согласованию",
     },
   ];
@@ -70,7 +71,7 @@ export default function Contacts() {
                 <div>
                   <h3 className="font-medium">Адрес производства</h3>
                   <p className="text-muted-foreground">
-                    Московская область, г. Подольск, ул. Промышленная, 5
+                    тер. ПромСтрой, д. 1, стр. 1, д. Отрада, г.о. Клин, МО, 141663
                   </p>
                 </div>
               </div>
@@ -82,25 +83,10 @@ export default function Contacts() {
                 <div>
                   <h3 className="font-medium">Телефон</h3>
                   <a
-                    href="tel:+74951234567"
+                    href="tel:+74959894212"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +7 (495) 123-45-67
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-medium">Email</h3>
-                  <a
-                    href="mailto:info@abbott-home.ru"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    info@abbott-home.ru
+                    +7 (495) 989-42-12
                   </a>
                 </div>
               </div>
@@ -112,8 +98,7 @@ export default function Contacts() {
                 <div>
                   <h3 className="font-medium">Режим работы</h3>
                   <p className="text-muted-foreground">
-                    Пн–Пт: 9:00–18:00<br />
-                    Сб–Вс: выходной
+                    с 9:00 до 17:00
                   </p>
                 </div>
               </div>
@@ -138,6 +123,7 @@ export default function Contacts() {
               >
                 <h3 className="font-semibold mb-2">{warehouse.name}</h3>
                 <p className="text-sm text-muted-foreground mb-1">{warehouse.address}</p>
+                <p className="text-sm text-muted-foreground mb-1">{warehouse.phone}</p>
                 <p className="text-sm text-muted-foreground mb-3">{warehouse.hours}</p>
                 <p className="text-xs text-muted-foreground italic">{warehouse.note}</p>
                 <button className="mt-4 text-sm font-medium text-primary hover:underline flex items-center gap-1">
