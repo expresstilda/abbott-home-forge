@@ -239,7 +239,7 @@ export default function Checkout() {
                       </p>
                       {deliveryMethod === "pickup" && (
                         <div className="mt-4 p-4 bg-secondary rounded-lg">
-                          <p className="font-medium text-sm">Склад ABBOTT HOME</p>
+                          <p className="font-medium text-sm">Склад АББОТТ ХОУМ</p>
                           <p className="text-sm text-muted-foreground">
                             Московская область, г. Подольск, ул. Промышленная, 5
                           </p>

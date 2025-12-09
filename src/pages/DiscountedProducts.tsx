@@ -31,7 +31,7 @@ export default function DiscountedProducts() {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
-            Выгодные предложения ABBOTT HOME
+            Выгодные предложения АББОТТ ХОУМ
           </h1>
           <p className="text-muted-foreground max-w-3xl">
             Уценённые товары с незначительными визуальными особенностями, выставочные образцы 

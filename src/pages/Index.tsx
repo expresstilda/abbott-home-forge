@@ -39,7 +39,7 @@ export default function Index() {
     },
     {
       question: "Какая гарантия на товары?",
-      answer: "На всю продукцию ABBOTT HOME предоставляется гарантия от производителя сроком 12 месяцев. Гарантия распространяется на производственные дефекты.",
+      answer: "На всю продукцию АББОТТ ХОУМ предоставляется гарантия от производителя сроком 12 месяцев. Гарантия распространяется на производственные дефекты.",
     },
   ];
 
@@ -76,7 +76,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl" />
               <img
                 src={`${BASE_PATH}placeholder.svg`}
-                alt="Интерьер с мебелью ABBOTT HOME"
+                alt="Интерьер с мебелью АББОТТ ХОУМ"
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
@@ -177,7 +177,7 @@ export default function Index() {
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
               <img
                 src={`${BASE_PATH}placeholder.svg`}
-                alt="Производство ABBOTT HOME"
+                alt="Производство АББОТТ ХОУМ"
                 className="w-full h-full object-cover"
               />
             </div>

@@ -55,7 +55,7 @@ export default function Contacts() {
         </nav>
 
         <h1 className="text-3xl md:text-4xl font-serif font-semibold mb-8">
-          Контакты ABBOTT HOME
+          Контакты АББОТТ ХОУМ
         </h1>
 
         {/* Main Contacts */}
@@ -152,7 +152,7 @@ export default function Contacts() {
         {/* Where to Buy */}
         <section className="mb-16">
           <h2 className="font-serif font-semibold text-xl mb-6">
-            Где купить ABBOTT HOME
+            Где купить АББОТТ ХОУМ
           </h2>
           <p className="text-muted-foreground mb-6">
             Покупайте там, где вам удобно — в нашем официальном магазине или на маркетплейсах
