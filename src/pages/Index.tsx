@@ -143,8 +143,7 @@ export default function Index() {
         <div className="container-custom">
           <h2 className="section-title text-center">Выгодное предложение</h2>
           <p className="section-subtitle text-center max-w-2xl mx-auto">
-            Уценённые товары с небольшими косметическими особенностями и выставочные образцы. 
-            Полностью функциональны и с гарантией.
+            Уценённые товары с небольшими косметическими особенностями. Полностью функциональны.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8">
             {discountedProducts.slice(0, 3).map((product) => (
