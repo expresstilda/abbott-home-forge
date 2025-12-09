@@ -95,22 +95,18 @@ export default function Horeca() {
     {
       icon: Building2,
       title: "Отели, мини-отели, апарт-отели и хостелы",
-      description: "Оснащайте номера и коридоры напольными вешалками, зеркалами и стеллажами из готового ассортимента. Заказывайте одну модель сразу в нужном количестве.",
     },
     {
       icon: UtensilsCrossed,
       title: "Рестораны, кафе, бары",
-      description: "Напольные вешалки для гардеробов, зоны ожидания гостей, зеркала и компактные стеллажи — всё из уже существующих моделей.",
     },
     {
       icon: Briefcase,
       title: "Офисы, коворкинги и шоурумы",
-      description: "Вешалки и стеллажи для сотрудников и гостей, аккуратные напольные зеркала для санузлов и примерочных зон.",
     },
     {
       icon: MapPin,
       title: "Другие объекты",
-      description: "Любые проекты, где нужна партия одинаковых вешалок, стеллажей или зеркал — от фитнес-клубов до медицинских центров.",
     },
   ];
 
@@ -233,8 +229,7 @@ export default function Horeca() {
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <item.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
+                <h3 className="font-semibold text-foreground">{item.title}</h3>
               </div>
             ))}
           </div>
