@@ -200,7 +200,7 @@ export default function Horeca() {
         <div className="container-custom">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground leading-tight mb-6">
-              Оптовым покупателям
+              «АББОТТ ХОУМ» для гостиниц, ресторанов и корпоративных клиентов
             </h1>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               Мы производим напольные вешалки, стеллажи, системы хранения, напольные зеркала 
