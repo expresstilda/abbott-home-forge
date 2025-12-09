@@ -93,12 +93,12 @@ export default function Index() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {[
-              { name: "Зеркала напольные", desc: "Напольные зеркала в полный рост", slug: "zerkala-napolnye" },
-              { name: "Зеркала настенные", desc: "Настенные зеркала для интерьера", slug: "zerkala-nastennye" },
-              { name: "Вешалки напольные", desc: "Компактные и прочные вешалки", slug: "veshalki-napolnye" },
-              { name: "Системы хранения", desc: "Комплексные решения для организации", slug: "sistemy-hraneniya" },
-              { name: "Журнальные столики", desc: "Стильные столики для гостиной", slug: "zhurnalnye-stoliki" },
-              { name: "Этажерки", desc: "Функциональные этажерки для хранения", slug: "etazherki" },
+              { name: "Зеркала", desc: "Напольные и настенные", slug: "zerkala-napolnye" },
+              { name: "Вешалки напольные", desc: "Компактные и вместительные", slug: "veshalki-napolnye" },
+              { name: "Система Стенвол", desc: "3 в 1: отделка, мебель, хранение", slug: "sistemy-hraneniya" },
+              { name: "Столы и столики", desc: "Журнальные и обеденные", slug: "zhurnalnye-stoliki" },
+              { name: "Этажерки", desc: "Прочные, в современном дизайне", slug: "etazherki" },
+              { name: "Стеновые декоративные панели", desc: "Для отделки стен и создания стильных интерьеров", slug: "zerkala-nastennye" },
             ].map((cat) => (
               <Link
                 key={cat.slug}
