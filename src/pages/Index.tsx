@@ -50,12 +50,9 @@ export default function Index() {
         <div className="container-custom py-16 md:py-24 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="animate-slide-up">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground leading-tight mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground leading-tight mb-8">
                 Коллекции стильных, качественных предметов мебели и товаров для дома по оптимальной цене
               </h1>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Более 25 лет мы производим товары для России, стран СНГ, Европы и Америки
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
                 <Link to="/catalog" className="btn-primary text-center">
                   Перейти в каталог
@@ -63,8 +60,8 @@ export default function Index() {
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
-                  { icon: Factory, text: "Производство под Москвой" },
-                  { icon: Settings, text: "Собственное оборудование" },
+                  { icon: Factory, text: "Более 30 лет на рынке" },
+                  { icon: Settings, text: "Собственное производство полного цикла" },
                   { icon: Truck, text: "Доставка по всей России" },
                   { icon: Shield, text: "Гарантия качества" },
                 ].map((item, i) => (
