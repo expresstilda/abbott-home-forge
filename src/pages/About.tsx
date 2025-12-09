@@ -58,7 +58,7 @@ export default function About() {
     },
     {
       year: "2022",
-      title: "Запуск ABBOTT HOME",
+      title: "Запуск АББОТТ ХОУМ",
       description: "Создание линейки мебели и товаров для дома на базе профессионального производства",
     },
   ];
@@ -91,7 +91,7 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground leading-tight mb-6">
-                ABBOTT HOME — домашние решения на основе профессионального производства
+                АББОТТ ХОУМ — домашние решения на основе профессионального производства
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Проект вырос из крупного производства торгового оборудования с 25-летним опытом. 
@@ -102,7 +102,7 @@ export default function About() {
             <div className="aspect-video bg-muted rounded-xl overflow-hidden">
               <img
                 src={`${BASE_PATH}placeholder.svg`}
-                alt="Производство ABBOTT HOME"
+                alt="Производство АББОТТ ХОУМ"
                 className="w-full h-full object-cover"
               />
             </div>

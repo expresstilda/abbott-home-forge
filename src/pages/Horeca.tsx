@@ -226,7 +226,7 @@ export default function Horeca() {
       {/* Target Audience */}
       <section className="py-16 md:py-24">
         <div className="container-custom">
-          <h2 className="section-title text-center">Кому подходят решения ABBOTT HOME</h2>
+          <h2 className="section-title text-center">Кому подходят решения АББОТТ ХОУМ</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
             {targetAudience.map((item, i) => (
               <div key={i} className="bg-card p-6 rounded-xl border border-border">

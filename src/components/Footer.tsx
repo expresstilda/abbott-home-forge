@@ -13,7 +13,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-muted leading-relaxed">
-              ABBOTT HOME — проект производителя торгового оборудования с 25+ летним опытом. 
+              АББОТТ ХОУМ — проект производителя торгового оборудования с 25+ летним опытом. 
               Мы создаём стильную и функциональную мебель для дома, используя профессиональные 
               технологии и материалы.
             </p>
@@ -109,7 +109,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-background/10 text-center text-sm text-muted">
-          <p>© {new Date().getFullYear()} ABBOTT HOME. Все права защищены.</p>
+          <p>© {new Date().getFullYear()} АББОТТ ХОУМ. Все права защищены.</p>
           <p className="mt-1">ООО «ПК Поливер»</p>
         </div>
       </div>
