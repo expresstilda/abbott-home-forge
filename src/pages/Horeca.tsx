@@ -192,9 +192,9 @@ export default function Horeca() {
 
   const productionFeatures = [
     { icon: Factory, text: "Собственное производство" },
-    { icon: Settings, text: "25+ лет опыта в оборудовании" },
-    { icon: CheckCircle, text: "Промышленное качество для интенсивной нагрузки" },
-    { icon: Repeat, text: "Повторяемость моделей и наличие серий" },
+    { icon: Settings, text: "Опыт работы более 30 лет" },
+    { icon: CheckCircle, text: "Надежность и долговечность наших решений" },
+    { icon: Percent, text: "Выгодные условия" },
   ];
 
   return (
@@ -323,12 +323,7 @@ export default function Horeca() {
       {/* Production */}
       <section className="py-16 md:py-24">
         <div className="container-custom">
-          <h2 className="section-title text-center">Почему на нас можно опираться в проектах</h2>
-          <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10">
-            За ABBOTT HOME стоит реальное производство с серьёзным оборудованием. 
-            Все модели — серийные и отработанные. Удобно, когда нужно много одинаковых 
-            позиций для сети или объекта.
-          </p>
+          <h2 className="section-title text-center mb-10">Почему с нами комфортно работать</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {productionFeatures.map((item, i) => (
               <div key={i} className="flex flex-col items-center text-center p-4">
