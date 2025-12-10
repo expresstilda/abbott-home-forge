@@ -265,7 +265,7 @@ export default function Horeca() {
       {/* How We Work */}
       <section className="py-16 md:py-24">
         <div className="container-custom">
-          <h2 className="section-title text-center">Как мы работаем с оптовыми клиентами</h2>
+          <h2 className="section-title text-center">Как мы работаем с оптовыми покупателями</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
             {workAdvantages.map((item, i) => (
               <div key={i} className="flex items-start gap-4">
