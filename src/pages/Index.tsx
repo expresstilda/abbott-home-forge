@@ -61,7 +61,7 @@ export default function Index() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
                   { icon: Factory, text: "Более 30 лет на рынке" },
-                  { icon: Settings, text: "Собственное производство полного цикла" },
+                  { icon: Settings, text: "Собственное производство полного цикла с 1997 года" },
                   { icon: Truck, text: "Доставка по всей России" },
                   { icon: Shield, text: "Гарантия качества" },
                 ].map((item, i) => (
