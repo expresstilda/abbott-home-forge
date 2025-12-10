@@ -35,7 +35,7 @@ export function Header() {
               <Link
                 key={link.name}
                 to={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-xs font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.name}
               </Link>
@@ -43,7 +43,7 @@ export function Header() {
             {/* Phone */}
             <a
               href="tel:+74959894212"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
               +7 (495) 989-42-12
             </a>
