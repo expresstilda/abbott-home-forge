@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мебель для ПВЗ Wildberries — по новому брендбуку 2026</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #171717; background: #fff; line-height: 1.5; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.95); border-bottom: 1px solid #e5e5e5; backdrop-filter: blur(8px); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 0; flex-wrap: wrap; }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+    .logo-icon { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border: 1px solid #e5e5e5; background: #f5f5f5; border-radius: 8px; font-size: 12px; font-weight: 700; }
+    .logo-text strong { display: block; font-size: 15px; }
+    .logo-text span { font-size: 12px; color: #525252; }
+    nav { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+    nav a { color: #737373; text-decoration: none; font-size: 14px; }
+    nav a:hover { color: #171717; text-decoration: underline; }
+    .header-cta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .header-cta .phone { font-size: 14px; font-weight: 600; padding: 10px 16px; border: 1px solid #e5e5e5; border-radius: 8px; text-decoration: none; color: #171717; }
+    .header-cta .phone:hover { background: #fafafa; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; text-decoration: none; border: none; transition: background .2s; }
+    .btn-outline { background: transparent; border: 1px solid #e5e5e5; color: #171717; }
+    .btn-primary { background: #171717; color: #fff; }
+    .btn-primary:hover { background: #262626; }
+
+    /* Sections */
+    section { padding: 64px 0; }
+    section:nth-child(even) { background: #fafafa; }
+    h2 { font-size: 28px; font-weight: 700; margin: 0 0 16px; line-height: 1.2; }
+    p { margin: 0 0 16px; color: #525252; font-size: 16px; }
+
+    /* Hero */
+    .hero { padding: 80px 0; background: #fff; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+    .hero-tabs { display: flex; gap: 8px; flex-wrap: nowrap; margin-bottom: 24px; }
+    .hero-tab { padding: 8px 14px; border-radius: 8px; border: 1px solid #e5e5e5; background: #fff; color: #525252; font-size: 13px; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
+    .hero-tab:hover { background: #fafafa; border-color: #d4d4d4; }
+    .hero-tab.active { background: #f0f0f0; border-color: #171717; color: #171717; font-weight: 500; }
+    .hero h1 { font-size: 36px; font-weight: 700; line-height: 1.2; margin: 0 0 20px; max-width: 560px; }
+    .hero-desc { color: #525252; font-size: 16px; margin-bottom: 32px; max-width: 520px; }
+    .hero-benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 32px; list-style: none; padding: 0; }
+    @media (max-width: 600px) { .hero-benefits { grid-template-columns: 1fr; } }
+    .hero-benefits li { display: flex; align-items: flex-start; gap: 12px; padding: 16px; border: 1px solid #e5e5e5; border-radius: 8px; background: #fff; font-size: 14px; }
+    .hero-benefits li::before { content: '✓'; color: #22c55e; font-weight: 700; flex-shrink: 0; }
+    .hero-note { font-size: 13px; color: #737373; margin-top: 12px; }
+    .hero-image { background: #e5e5e5; border: 1px solid #e5e5e5; border-radius: 12px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; color: #737373; font-size: 14px; text-align: center; padding: 24px; }
+    .hero-image-caption { margin-top: 16px; }
+    .hero-image-caption strong { display: block; font-size: 15px; color: #171717; margin-bottom: 4px; }
+    .hero-image-caption span { font-size: 14px; color: #525252; }
+
+    /* Questionnaire */
+    .quiz-section h2 { margin-bottom: 12px; }
+    .quiz-section .quiz-subtitle { margin-bottom: 32px; }
+    .quiz-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    @media (max-width: 900px) { .quiz-grid { grid-template-columns: 1fr; } }
+    .quiz-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 32px; }
+    .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .quiz-step { font-size: 14px; color: #171717; }
+    .quiz-time { font-size: 13px; color: #737373; }
+    .quiz-progress { height: 4px; background: #e5e5e5; border-radius: 2px; margin-bottom: 8px; overflow: hidden; }
+    .quiz-progress-bar { height: 100%; width: 0%; background: #171717; border-radius: 2px; transition: width .3s; }
+    .quiz-progress-percent { font-size: 12px; color: #737373; margin-bottom: 20px; }
+    .quiz-question { font-size: 18px; font-weight: 600; margin-bottom: 20px; }
+    .radio-group { display: flex; flex-direction: column; gap: 12px; }
+    .radio-label { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border: 1px solid #e5e5e5; border-radius: 8px; cursor: pointer; }
+    .radio-label:has(input:checked) { border-color: #171717; background: #fafafa; }
+    .radio-label input { accent-color: #171717; }
+    .quiz-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 24px; padding-top: 20px; border-top: 1px solid #e5e5e5; }
+    .quiz-back { background: none; border: none; padding: 0; color: #525252; font-size: 14px; cursor: pointer; text-decoration: underline; }
+    .quiz-back:hover { color: #171717; }
+    .quiz-benefits-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 32px; }
+    .quiz-benefits-card h3 { font-size: 18px; font-weight: 600; margin: 0 0 20px; }
+    .quiz-benefits { list-style: none; padding: 0; margin: 0; }
+    .quiz-benefits li { display: flex; gap: 12px; margin-bottom: 12px; font-size: 15px; color: #525252; }
+    .quiz-benefits li:last-child { margin-bottom: 0; }
+    .quiz-benefits li::before { content: '✓'; color: #22c55e; font-weight: 700; flex-shrink: 0; }
+
+    /* Tabs */
+    .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+    .tab { padding: 10px 18px; border-radius: 999px; border: 1px solid #e5e5e5; background: transparent; cursor: pointer; font-size: 14px; }
+    .tab:hover { background: #f5f5f5; }
+    .tab.active { background: #171717; color: #fff; border-color: #171717; }
+
+    /* Product grid */
+    .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
+    .product-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; overflow: hidden; }
+    .product-card img, .product-card .img-placeholder { width: 100%; aspect-ratio: 4/3; background: #e5e5e5; object-fit: cover; }
+    .product-card .img-placeholder { display: flex; align-items: center; justify-content: center; color: #737373; font-size: 12px; }
+    .product-card-body { padding: 20px; }
+    .product-card h3 { font-size: 16px; font-weight: 600; margin: 0 0 8px; }
+    .product-card p { font-size: 13px; color: #525252; margin: 0 0 16px; line-height: 1.5; }
+    .product-card .btn { width: 100%; padding: 12px; font-size: 14px; }
+
+    /* Gallery */
+    .gallery-note { font-size: 13px; color: #737373; margin-bottom: 20px; }
+    .gallery-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+    .gallery-chip { padding: 8px 14px; border-radius: 999px; border: 1px solid #e5e5e5; background: #fff; color: #171717; font-size: 13px; cursor: pointer; }
+    .gallery-chip.active { background: #171717; color: #fff; border-color: #171717; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media (max-width: 900px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
+    .gallery-card { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; overflow: hidden; cursor: pointer; display: flex; flex-direction: column; }
+    .gallery-thumb { position: relative; aspect-ratio: 4/3; background: linear-gradient(135deg, #d4d4d4, #f0f0f0); }
+    .gallery-badges { position: absolute; top: 10px; left: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+    .gallery-badge { background: rgba(23,23,23,0.9); color: #fff; font-size: 11px; padding: 4px 8px; border-radius: 999px; }
+    .gallery-body { padding: 16px; }
+    .gallery-title { font-size: 15px; font-weight: 600; margin: 0 0 6px; }
+    .gallery-subtitle { font-size: 13px; color: #525252; margin: 0; }
+    .gallery-cta { margin-top: 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 20px; border: 1px solid #e5e5e5; border-radius: 12px; background: #fafafa; }
+    .gallery-cta span { font-size: 14px; color: #171717; }
+    @media (max-width: 700px) { .gallery-cta { flex-direction: column; align-items: stretch; } }
+
+    /* Info blocks */
+    .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media (max-width: 768px) { .info-grid { grid-template-columns: 1fr; } }
+    .info-block { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 24px; }
+    .info-block h3 { font-size: 18px; font-weight: 600; margin: 0 0 12px; }
+    .info-block p { font-size: 14px; margin: 0; }
+
+    /* Two columns */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+    .two-col .img-placeholder { background: #e5e5e5; border-radius: 12px; aspect-ratio: 16/10; }
+
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid #e5e5e5; }
+    .faq-item summary { padding: 20px 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-weight: 500; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '▼'; font-size: 12px; color: #737373; }
+    .faq-item[open] summary::after { transform: rotate(180deg); }
+    .faq-item p { padding-bottom: 20px; margin: 0; }
+
+    /* Consultation */
+    .consult-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    @media (max-width: 900px) { .consult-grid { grid-template-columns: 1fr; } }
+    .consult-form .form-group { margin-bottom: 16px; }
+    .consult-form input { width: 100%; padding: 14px 18px; border: 1px solid #e5e5e5; border-radius: 8px; font-size: 15px; }
+    .consult-form .checkbox { display: flex; align-items: flex-start; gap: 12px; margin: 20px 0; font-size: 14px; color: #525252; }
+    .consult-form .checkbox input { width: 18px; height: 18px; margin-top: 2px; }
+    .consult-form .btn { width: 100%; padding: 16px; font-size: 16px; }
+    .consult-messengers { display: flex; gap: 12px; margin-top: 20px; }
+    .consult-messengers a { width: 44px; height: 44px; border: 1px solid #e5e5e5; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #171717; text-decoration: none; }
+    .expert-card { background: #f5f5f5; border-radius: 12px; padding: 24px; }
+    .expert-avatar { width: 80px; height: 80px; background: #e5e5e5; border-radius: 50%; margin-bottom: 16px; }
+    .expert-card h3 { font-size: 18px; margin: 0 0 4px; }
+    .expert-card .role { font-size: 14px; color: #525252; margin-bottom: 16px; }
+    .expert-card ul { list-style: none; padding: 0; margin: 0; font-size: 14px; }
+    .expert-card li { margin-bottom: 8px; padding-left: 20px; position: relative; }
+    .expert-card li::before { content: '•'; position: absolute; left: 0; }
+
+    /* Footer */
+    footer { background: #171717; color: #fff; padding: 48px 0 24px; }
+    footer a { color: #a3a3a3; text-decoration: none; }
+    footer a:hover { color: #fff; }
+    .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 32px; }
+    @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid #404040; font-size: 13px; color: #737373; }
+    footer .section-title { font-size: 14px; font-weight: 600; margin-bottom: 16px; color: #fff; }
+    footer p { margin: 0 0 8px; color: #a3a3a3; font-size: 14px; }
+
+    /* Selected items */
+    .selected-panel { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; margin-top: 24px; padding: 20px 24px; background: #f5f5f5; border-radius: 12px; font-size: 14px; border: 1px solid #e5e5e5; }
+    .selected-info { flex: 1; }
+    .selected-title { font-weight: 600; margin-bottom: 4px; }
+    .selected-subtitle { color: #737373; font-size: 13px; margin-bottom: 12px; }
+    .selected-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .selected-chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid #e5e5e5; border-radius: 999px; background: #fff; font-size: 13px; color: #171717; }
+    .selected-chip button { border: none; background: transparent; cursor: pointer; color: #a3a3a3; font-size: 14px; line-height: 1; padding: 0; }
+    .selected-chip button:hover { color: #171717; }
+    .selected-empty { color: #737373; font-size: 13px; padding: 6px 0; }
+    @media (max-width: 700px) { .selected-panel { flex-direction: column; align-items: stretch; } }
+
+    /* Modal */
+    .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.4); display: none; align-items: center; justify-content: center; padding: 24px; z-index: 100; }
+    .modal-backdrop.open { display: flex; }
+    .modal { background: #fff; border-radius: 12px; max-width: 720px; width: 100%; padding: 24px; position: relative; border: 1px solid #e5e5e5; }
+    .modal-close { position: absolute; top: 12px; right: 12px; background: #f5f5f5; border: 1px solid #e5e5e5; border-radius: 8px; width: 32px; height: 32px; cursor: pointer; }
+    .modal h3 { margin: 0 0 8px; font-size: 22px; }
+    .modal-subtitle { color: #525252; margin-bottom: 16px; }
+    .selected-list { margin: 0 0 16px; padding-left: 18px; color: #171717; font-size: 14px; }
+    .modal-form .form-group { margin-bottom: 12px; }
+    .modal-form input { width: 100%; padding: 12px 14px; border: 1px solid #e5e5e5; border-radius: 8px; font-size: 14px; }
+    .modal-form .checkbox { display: flex; align-items: flex-start; gap: 12px; margin: 12px 0 16px; font-size: 13px; color: #525252; }
+    .modal-form .checkbox input { width: 18px; height: 18px; margin-top: 2px; }
+    .modal-form .btn { width: 100%; padding: 14px; font-size: 15px; }
+    .modal-empty { color: #737373; font-size: 13px; margin-bottom: 16px; }
+    body.modal-open { overflow: hidden; }
+
+    .gallery-modal { max-width: 860px; }
+    .gallery-modal-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; }
+    @media (max-width: 800px) { .gallery-modal-grid { grid-template-columns: 1fr; } }
+    .gallery-modal-image { aspect-ratio: 4/3; background: linear-gradient(135deg, #d4d4d4, #f0f0f0); border-radius: 12px; }
+    .gallery-modal-meta { font-size: 14px; color: #171717; margin: 0 0 12px; }
+    .gallery-modal-meta span { color: #525252; }
+    .gallery-modal-list { margin: 0 0 16px; padding-left: 18px; color: #171717; font-size: 14px; }
+    .gallery-modal-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .gallery-modal-actions .btn { flex: 1; min-width: 220px; }
+    .gallery-modal-nav { display: flex; gap: 8px; margin-top: 16px; }
+    .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: #171717; color: #fff; padding: 10px 16px; border-radius: 999px; font-size: 13px; opacity: 0; pointer-events: none; transition: opacity .2s; z-index: 120; }
+    .toast.show { opacity: 1; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">WB</div>
+      <div class="logo-text">
+        <strong>Мебель для ПВЗ</strong>
+        <span>официальный поставщик Wildberries</span>
+      </div>
+    </a>
+    <nav>
+      <a href="#quiz">Расчёт</a>
+      <a href="#assortment">Ассортимент</a>
+      <a href="#gallery">Фото</a>
+      <a href="#premises">Планировка</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+74956401810" class="phone">+7 495 640-18-10</a>
+      <button class="btn btn-outline">Написать</button>
+      <button class="btn btn-primary">Рассчитать комплект</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-tabs">
+          <button class="hero-tab active">Расчёт комплекта за 2 минуты</button>
+          <button class="hero-tab">Под вашу планировку</button>
+          <button class="hero-tab">Договор и документы</button>
+        </div>
+        <h1>Мебель для ПВЗ Wildberries по новому брендбуку 2026 года напрямую от производителя</h1>
+        <p class="hero-desc">Подберём комплект под ваше помещение, дадим рекомендации по расстановке и сразу посчитаем стоимость. При необходимости учтём нестандартные размеры и сложные планировки.</p>
+        <ul class="hero-benefits">
+          <li>Являемся официальным поставщиком собственных пунктов компании Wildberries</li>
+          <li>Более 3500 пунктов ПВЗ укомплектовано</li>
+          <li>Все артикулы в наличии — отгрузим завтра</li>
+          <li>Изготовим мебель по вашим размерам</li>
+        </ul>
+        <button class="btn btn-primary">Рассчитать комплект</button>
+        <p class="hero-note">Доставка по России • Подбор под площадь и поток • Без навязчивых звонков</p>
+      </div>
+      <div>
+        <div class="hero-image">
+          <span style="color: #a3a3a3;">Изображение</span>
+        </div>
+        <div class="hero-image-caption">
+          <strong>100% активация точки с нашей мебелью</strong>
+          <span>Рассчитаем комплект под вашу площадь и планировку — подскажем, что важно учесть.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="calc"></div>
+<section id="quiz" class="quiz-section">
+  <div class="container">
+    <h2>Ответьте на 4 вопроса — и получите расчёт комплекта под ваш ПВЗ</h2>
+    <p class="quiz-subtitle">Мы соберём комплект под площадь и планировку, а затем пришлём список позиций и ориентир по стоимости.</p>
+    <div class="quiz-grid">
+      <div class="quiz-card">
+        <div class="quiz-header">
+          <span class="quiz-step" id="quizStep">Шаг 1 из 5</span>
+          <span class="quiz-time">Это займёт 1-2 минуты</span>
+        </div>
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar" id="quizProgressBar" style="width: 0%"></div>
+        </div>
+        <div class="quiz-progress-percent" id="quizProgressPercent">0%</div>
+        <div class="quiz-question" id="quizQuestion">Что вы планируете?</div>
+        <div id="quizFields"></div>
+        <div class="quiz-footer">
+          <button type="button" class="quiz-back" id="quizBackBtn">Назад</button>
+          <button class="btn btn-primary" id="quizNextBtn">Далее</button>
+        </div>
+      </div>
+      <div class="quiz-benefits-card">
+        <h3>Что вы получите в конце</h3>
+        <ul class="quiz-benefits">
+          <li>Список мебели под ваш метраж (что входит в комплект)</li>
+          <li>Расчет стоимости</li>
+          <li>Рекомендации по расстановке под планировку</li>
+          <li>Понимание, что можно докупить позже</li>
+          <li>Варианты по срокам отгрузки и поставки</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="assortment">
+  <div class="container">
+    <h2>Полный ассортимент мебели в наличии — отгрузка завтра</h2>
+    <p>Выберите категории — покажем типовые позиции. Добавьте нужное в расчёт, и мы соберём комплект под ваш метраж.</p>
+    <div class="tabs">
+      <button class="tab active">Примерочные</button>
+      <button class="tab">Зона выдачи</button>
+      <button class="tab">Самообслуживание</button>
+      <button class="tab">Хранение для коробок</button>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="img-placeholder">Фото</div>
+        <div class="product-card-body">
+          <h3>Скамейка с зеркалом</h3>
+          <p>Единый модуль зоны примерочной</p>
+          <button class="btn btn-primary">Добавить в расчёт</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="img-placeholder">Фото</div>
+        <div class="product-card-body">
+          <h3>Стол менеджера</h3>
+          <p>Рабочее место сотрудника ПВЗ</p>
+          <button class="btn btn-primary">Добавить в расчёт</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="img-placeholder">Фото</div>
+        <div class="product-card-body">
+          <h3>Стол выдачи заказов</h3>
+          <p>Удобная зона выдачи и проверки</p>
+          <button class="btn btn-primary">Добавить в расчёт</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="img-placeholder">Фото</div>
+        <div class="product-card-body">
+          <h3>Стол самообслуживания</h3>
+          <p>Зона самостоятельной упаковки</p>
+          <button class="btn btn-primary">Добавить в расчёт</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="img-placeholder">Фото</div>
+        <div class="product-card-body">
+          <h3>Урна</h3>
+          <p>Для зоны самообслуживания</p>
+          <button class="btn btn-primary">Добавить в расчёт</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="img-placeholder">Фото</div>
+        <div class="product-card-body">
+          <h3>Стеллажи для коробок</h3>
+          <p>Хранение под поток и габариты</p>
+          <button class="btn btn-primary">Добавить в расчёт</button>
+        </div>
+      </div>
+    </div>
+    <div class="selected-panel" id="selectedPanel">
+      <div class="selected-info">
+        <div class="selected-title">Вы выбрали</div>
+        <div class="selected-subtitle">Можно удалить позиции — мы соберём комплект по списку.</div>
+        <div class="selected-chips" id="selectedChips">
+          <span class="selected-empty" id="selectedEmpty">Пока ничего не выбрано</span>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="openSelectedModal">Рассчитать комплект</button>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <h2>Фото реальных ПВЗ Wildberries с нашей мебелью</h2>
+    <p>Разные площади и планировки. Нажмите на фото — откроется крупнее.</p>
+    <div class="gallery-note">Подбираем комплект под брендбук 2026 и ваш метраж — можно собрать поэтапно.</div>
+    <div class="gallery-filters" id="galleryFilters">
+      <button class="gallery-chip active" data-filter="all">Все</button>
+      <button class="gallery-chip" data-filter="open">Открытие</button>
+      <button class="gallery-chip" data-filter="retrofit">Переоборудование</button>
+      <button class="gallery-chip" data-filter="small">Малые площади</button>
+      <button class="gallery-chip" data-filter="corridor">Узкие помещения</button>
+      <button class="gallery-chip" data-filter="large">Большие ПВЗ</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+    <div class="gallery-cta">
+      <span>Хотите так же аккуратно — под ваш метраж и планировку?</span>
+      <a class="btn btn-primary" href="#calc">Рассчитать комплект</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Под новый брендбук Wildberries 2026: подскажем, что важно учесть — до заказа мебели</h2>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>Открытие с нуля</h3>
+        <p>Подберём минимальный комплект под метраж, учтём требования брендбука к примерочным, стеллажам и зоне выдачи. Дадим рекомендации по расстановке.</p>
+      </div>
+      <div class="info-block">
+        <h3>Переоборудование точки</h3>
+        <p>Поможем обновить мебель под новый стандарт WB 2026. Оценим, что можно оставить, что заменить, предложим поэтапную комплектацию.</p>
+      </div>
+      <div class="info-block">
+        <h3>Поэтапно</h3>
+        <p>Если бюджет ограничен — подберём варианты заказа частями: сначала необходимое, потом докупка. Все размеры будут совместимы.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="premises">
+  <div class="container">
+    <h2>Сложная планировка? Подберём компоновку под брендбук Wildberries 2026 — чтобы всё встало и работало</h2>
+    <p>По вашему плану/фото предложим расстановку и размеры модулей. Если стандарт не подходит — изготовим по вашим размерам.</p>
+    <div class="info-grid" style="margin-top: 24px;">
+      <div class="info-block">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 40px; height: 40px; background: #e5e5e5; border-radius: 8px;"></div>
+          <h3 style="font-size: 18px; margin: 0;">Узкое коридором</h3>
+        </div>
+        <p>Сохраним проходы и зоны: подберём глубину модулей и расстановку, чтобы не было «пробок».</p>
+      </div>
+      <div class="info-block">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 40px; height: 40px; background: #e5e5e5; border-radius: 8px;"></div>
+          <h3 style="font-size: 18px; margin: 0;">Сложная геометрия / колонны / ниши</h3>
+        </div>
+        <p>Подгоним размеры под реальные ограничения: чтобы модули встали без переделок.</p>
+      </div>
+      <div class="info-block">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 40px; height: 40px; background: #e5e5e5; border-radius: 8px;"></div>
+          <h3 style="font-size: 18px; margin: 0;">Нестандартные размеры</h3>
+        </div>
+        <p>Изготовим мебель по вашим размерам и подскажем, что критично по брендбуку 2026.</p>
+      </div>
+    </div>
+    <div style="margin-top: 24px;">
+      <p style="margin-bottom: 8px;"><strong>Быстрее всего — отправить план/фото</strong></p>
+      <p style="margin-bottom: 20px;">Отметим, где лучше поставить зоны, и какие размеры подойдут под ваш метраж.</p>
+      <button class="btn btn-primary">Прикрепить план/фото</button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+      <details>
+        <summary>Что входит в минимальный комплект?</summary>
+        <p>Минимальный комплект зависит от метража и типа ПВЗ. Обычно включает: примерочные, стеллажи, рабочий стол, зону выдачи. Точный список сформируем после ответов на вопросы.</p>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>Можно ли под маленькое / узкое помещение?</summary>
+        <p>Да, подберём компактные модули и оптимальную расстановку. Много работаем с помещениями от 15 м².</p>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>Сколько времени занимает расчёт?</summary>
+        <p>Обычно до 1 рабочего дня. При срочности — в тот же день.</p>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>Есть доставка в регионы?</summary>
+        <p>Да, доставляем по всей России. Свой курьер и СВХ — более 3000 успешных поставок.</p>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>Можно докупить часть набора позже?</summary>
+        <p>Да, подберём совместимые размеры. Часто клиенты заказывают поэтапно.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Нужна консультация по комплектации ПВЗ?</h2>
+    <div class="consult-grid">
+      <div>
+        <p style="margin-bottom: 24px;">Напишите пару деталей — и Татьяна подскажет по комплектации, планировке и ориентирам по закупке. Поможем собрать комплект под ваш метраж и срок.</p>
+        <form class="consult-form">
+          <div class="form-group">
+            <input type="text" placeholder="Имя">
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="Телефон *">
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" required>
+            <span>Я даю согласие на обработку персональных данных.</span>
+          </label>
+          <button type="submit" class="btn btn-primary">Получить консультацию</button>
+        </form>
+        <div class="consult-messengers">
+          <a href="#" title="Telegram">TG</a>
+          <a href="#" title="WhatsApp">WA</a>
+          <a href="#" title="Email">@</a>
+        </div>
+      </div>
+      <div class="expert-card">
+        <div class="expert-avatar"></div>
+        <h3>Татьяна</h3>
+        <div class="role">Эксперт по комплектации ПВЗ</div>
+        <ul>
+          <li>Оборудовала несколько сотен ПВЗ.</li>
+          <li>Участвовала в разработке мебели под новый брендбук вместе с командой Wildberries.</li>
+          <li>Подскажет, что важно учесть до заказа мебели.</li>
+          <li>Опыт работы: более пяти лет.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contacts">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="section-title">Контакты</div>
+        <p><strong>Адрес производства:</strong><br>Московская обл., Красногорский р-н, д. Глухово, ул. Центральная 85А</p>
+        <p><strong>Телефон:</strong> +7 915 040-33-10</p>
+        <p><strong>E-mail:</strong> <a href="mailto:info@furnitura.ru">info@furnitura.ru</a></p>
+      </div>
+      <div>
+        <div class="section-title">Режим работы</div>
+        <p>Офис: Пн–Пт 9:00–18:00 (без перерыва)<br>Склад: Пн–Пт 9:00–17:00 (без перерыва)</p>
+        <p><strong>Мессенджеры:</strong> WA</p>
+        <p><strong>Мы в соцсетях:</strong> Telegram • WA</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Мебель для ПВЗ — ИП Козин Анна Юрьевна ИНН 502400000031</span>
+      <a href="#">Политика обработки данных</a>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-backdrop" id="selectedModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="selectedModalTitle">
+    <button class="modal-close" type="button" id="closeSelectedModal">×</button>
+    <h3 id="selectedModalTitle">Рассчитать комплект по выбранным позициям</h3>
+    <div class="modal-subtitle">Мы учтем выбранные позиции и предложим компановку под ваш метраж</div>
+    <div id="modalSelectedContainer">
+      <div class="modal-empty" id="modalSelectedEmpty">Пока ничего не выбрано</div>
+      <ul class="selected-list" id="modalSelectedList"></ul>
+    </div>
+    <form class="modal-form">
+      <div class="form-group">
+        <input type="text" placeholder="Имя">
+      </div>
+      <div class="form-group">
+        <input type="tel" placeholder="Телефон *">
+      </div>
+      <label class="checkbox">
+        <input type="checkbox" required>
+        <span>Я даю согласие на обработку персональных данных</span>
+      </label>
+      <button type="submit" class="btn btn-primary">Рассчитать комплект</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="galleryModal" aria-hidden="true">
+  <div class="modal gallery-modal" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle">
+    <button class="modal-close" type="button" id="closeGalleryModal">×</button>
+    <h3 id="galleryModalTitle">ПВЗ</h3>
+    <div class="gallery-modal-grid">
+      <div class="gallery-modal-image" id="galleryModalImage"></div>
+      <div>
+        <div class="gallery-modal-meta">Площадь: <span id="galleryModalArea"></span></div>
+        <div class="gallery-modal-meta">Планировка: <span id="galleryModalLayout"></span></div>
+        <div class="gallery-modal-meta">Что было сделано:</div>
+        <ul class="gallery-modal-list" id="galleryModalBullets"></ul>
+        <div class="gallery-modal-actions">
+          <a class="btn btn-primary" href="#calc" id="galleryPrimaryBtn">Рассчитать комплект под моё помещение</a>
+          <button class="btn btn-outline" type="button" id="gallerySecondaryBtn">Задать вопрос</button>
+        </div>
+        <div class="gallery-modal-nav">
+          <button class="btn btn-outline" type="button" id="galleryPrevBtn">Назад</button>
+          <button class="btn btn-outline" type="button" id="galleryNextBtn">Вперёд</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">Откроем чат в WhatsApp/Telegram</div>
+
+<script>
+  // Tab switching
+  document.querySelectorAll('.tabs .tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+      this.parentElement.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+  // Hero tabs
+  document.querySelectorAll('.hero-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+      this.parentElement.querySelectorAll('.hero-tab').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Assortment selection
+  const selected = new Map();
+  const chipsContainer = document.getElementById('selectedChips');
+  const emptyState = document.getElementById('selectedEmpty');
+
+  const updateEmptyState = () => {
+    if (!chipsContainer || !emptyState) return;
+    emptyState.style.display = selected.size === 0 ? 'inline-block' : 'none';
+  };
+
+  const setButtonState = (button, isSelected) => {
+    if (!button) return;
+    if (isSelected) {
+      button.textContent = 'Добавлено';
+      button.classList.remove('btn-primary');
+      button.classList.add('btn-outline');
+    } else {
+      button.textContent = 'Добавить в расчёт';
+      button.classList.remove('btn-outline');
+      button.classList.add('btn-primary');
+    }
+  };
+
+  const removeItem = (name) => {
+    const entry = selected.get(name);
+    if (!entry) return;
+    entry.chip.remove();
+    setButtonState(entry.button, false);
+    selected.delete(name);
+    updateEmptyState();
+  };
+
+  const addItem = (name, button) => {
+    if (!name || !chipsContainer) return;
+    if (selected.has(name)) {
+      removeItem(name);
+      return;
+    }
+    const chip = document.createElement('span');
+    chip.className = 'selected-chip';
+    chip.innerHTML = `<span>${name}</span>`;
+    const removeBtn = document.createElement('button');
+    removeBtn.type = 'button';
+    removeBtn.setAttribute('aria-label', `Удалить ${name}`);
+    removeBtn.textContent = 'x';
+    removeBtn.addEventListener('click', () => removeItem(name));
+    chip.appendChild(removeBtn);
+    chipsContainer.appendChild(chip);
+    selected.set(name, { chip, button });
+    setButtonState(button, true);
+    updateEmptyState();
+  };
+
+  document.querySelectorAll('#assortment .product-card .btn').forEach(button => {
+    const card = button.closest('.product-card');
+    const nameEl = card ? card.querySelector('h3') : null;
+    const name = nameEl ? nameEl.textContent.trim() : '';
+    if (!name) return;
+    button.addEventListener('click', () => addItem(name, button));
+  });
+
+  // Selected modal
+  const modal = document.getElementById('selectedModal');
+  const openModalBtn = document.getElementById('openSelectedModal');
+  const closeModalBtn = document.getElementById('closeSelectedModal');
+  const modalList = document.getElementById('modalSelectedList');
+  const modalEmpty = document.getElementById('modalSelectedEmpty');
+
+  const renderModalList = () => {
+    if (!modalList || !modalEmpty) return;
+    modalList.innerHTML = '';
+    if (selected.size === 0) {
+      modalEmpty.style.display = 'block';
+      return;
+    }
+    modalEmpty.style.display = 'none';
+    selected.forEach((value, name) => {
+      const li = document.createElement('li');
+      li.textContent = name;
+      modalList.appendChild(li);
+    });
+  };
+
+  const openModal = () => {
+    if (!modal) return;
+    renderModalList();
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  };
+
+  const closeModal = () => {
+    if (!modal) return;
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  };
+
+  if (openModalBtn) openModalBtn.addEventListener('click', openModal);
+  if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+  if (modal) modal.addEventListener('click', (event) => {
+    if (event.target === modal) closeModal();
+  });
+
+  const PVZ_GALLERY = [
+    {
+      id: "g1",
+      title: "ПВЗ 18 м² — узкая планировка",
+      subtitle: "брендбук 2026: примерочная + стойка + хранение",
+      area: "18 м²",
+      layout: "узкое «коридором»",
+      format: "открытие",
+      bullets: ["Собрали компактную компоновку", "Оставили проход и рабочую зону", "Добавили хранение под коробки"],
+      tags: ["open", "small", "corridor"],
+    },
+    {
+      id: "g2",
+      title: "ПВЗ 22 м² — стартовый комплект",
+      subtitle: "примерочная + зона проверки + ожидание",
+      area: "22 м²",
+      layout: "квадрат",
+      format: "открытие",
+      bullets: ["Собрали базовый комплект", "Удобная зона проверки/выдачи", "Место ожидания без перегруза"],
+      tags: ["open", "small"],
+    },
+    {
+      id: "g3",
+      title: "ПВЗ 25 м² — узкое помещение",
+      subtitle: "компоновка с сохранением прохода",
+      area: "25 м²",
+      layout: "узкое «коридором»",
+      format: "открытие",
+      bullets: ["Подобрали узкие модули", "Сохранили логистику движения", "Оптимизировали хранение"],
+      tags: ["open", "corridor"],
+    },
+    {
+      id: "g4",
+      title: "ПВЗ 28 м² — обновление точки",
+      subtitle: "частичная замена без лишних покупок",
+      area: "28 м²",
+      layout: "смешанная",
+      format: "переоборудование",
+      bullets: ["Заменили ключевые позиции", "Оставили то, что было в порядке", "Подогнали под брендбук 2026"],
+      tags: ["retrofit", "medium"],
+    },
+    {
+      id: "g5",
+      title: "ПВЗ 30 м² — рабочая зона + хранение",
+      subtitle: "аккуратный вид и удобство сотруднику",
+      area: "30 м²",
+      layout: "квадрат",
+      format: "открытие",
+      bullets: ["Продумали рабочую стойку", "Добавили хранение под коробки", "Сделали зону выдачи удобнее"],
+      tags: ["open", "medium"],
+    },
+    {
+      id: "g6",
+      title: "ПВЗ 33 м² — большой поток",
+      subtitle: "пространство без хаоса",
+      area: "33 м²",
+      layout: "квадрат",
+      format: "переоборудование",
+      bullets: ["Разгрузили стойку отдельной зоной", "Добавили модули хранения", "Сделали понятные зоны для клиентов"],
+      tags: ["retrofit", "medium"],
+    },
+    {
+      id: "g7",
+      title: "ПВЗ 36 м² — расширенный комплект",
+      subtitle: "две зоны + дополнительное хранение",
+      area: "36 м²",
+      layout: "смешанная",
+      format: "открытие",
+      bullets: ["Увеличили объём хранения", "Сделали отдельную зону упаковки", "Сохранили аккуратный вид"],
+      tags: ["open", "large"],
+    },
+    {
+      id: "g8",
+      title: "ПВЗ 40 м² — большой ПВЗ",
+      subtitle: "просторная компоновка по брендбуку 2026",
+      area: "40 м²",
+      layout: "смешанная",
+      format: "открытие",
+      bullets: ["Собрали комплект под большую площадь", "Продумали зоны выдачи/проверки", "Добавили модули по потоку"],
+      tags: ["open", "large"],
+    },
+    {
+      id: "g9",
+      title: "ПВЗ 20 м² — компактно и аккуратно",
+      subtitle: "когда важен каждый метр",
+      area: "20 м²",
+      layout: "сложная",
+      format: "переоборудование",
+      bullets: ["Подобрали компактные позиции", "Учли нестандартные размеры", "Собрали без перегруза помещения"],
+      tags: ["retrofit", "small", "custom"],
+    },
+    {
+      id: "g10",
+      title: "ПВЗ 45 м² — большие зоны обслуживания",
+      subtitle: "удобно сотрудникам и клиентам",
+      area: "45 м²",
+      layout: "квадрат",
+      format: "переоборудование",
+      bullets: ["Обновили зоны под новый формат", "Добавили удобное хранение", "Сделали комфортную выдачу"],
+      tags: ["retrofit", "large"],
+    },
+    {
+      id: "g11",
+      title: "ПВЗ 27 м² — узкий вход и проход",
+      subtitle: "компоновка «без пробок»",
+      area: "27 м²",
+      layout: "узкое «коридором»",
+      format: "переоборудование",
+      bullets: ["Развели потоки движения", "Сузили модули там, где нужно", "Сохранили функциональность"],
+      tags: ["retrofit", "corridor", "medium"],
+    },
+    {
+      id: "g12",
+      title: "ПВЗ 32 м² — открытие",
+      subtitle: "комплект под брендбук 2026",
+      area: "32 м²",
+      layout: "смешанная",
+      format: "открытие",
+      bullets: ["Собрали комплект по задачам", "Учитывали план/фото помещения", "Подсказали по расстановке"],
+      tags: ["open", "medium"],
+    },
+  ];
+
+  const galleryGrid = document.getElementById('galleryGrid');
+  const galleryFilters = document.getElementById('galleryFilters');
+  const galleryModal = document.getElementById('galleryModal');
+  const closeGalleryModal = document.getElementById('closeGalleryModal');
+  const galleryTitle = document.getElementById('galleryModalTitle');
+  const galleryArea = document.getElementById('galleryModalArea');
+  const galleryLayout = document.getElementById('galleryModalLayout');
+  const galleryBullets = document.getElementById('galleryModalBullets');
+  const galleryPrevBtn = document.getElementById('galleryPrevBtn');
+  const galleryNextBtn = document.getElementById('galleryNextBtn');
+  const gallerySecondaryBtn = document.getElementById('gallerySecondaryBtn');
+  const galleryPrimaryBtn = document.getElementById('galleryPrimaryBtn');
+  const toast = document.getElementById('toast');
+
+  let currentFilter = 'all';
+  let currentList = [...PVZ_GALLERY];
+  let currentIndex = 0;
+
+  const showToast = (text) => {
+    if (!toast) return;
+    toast.textContent = text;
+    toast.classList.add('show');
+    window.clearTimeout(showToast.timer);
+    showToast.timer = window.setTimeout(() => toast.classList.remove('show'), 1600);
+  };
+
+  const filterGallery = (filter) => {
+    currentFilter = filter;
+    currentList = filter === 'all'
+      ? [...PVZ_GALLERY]
+      : PVZ_GALLERY.filter(item => item.tags.includes(filter));
+  };
+
+  const renderGallery = () => {
+    if (!galleryGrid) return;
+    galleryGrid.innerHTML = '';
+    currentList.forEach((item, index) => {
+      const card = document.createElement('div');
+      card.className = 'gallery-card';
+      card.innerHTML = `
+        <div class="gallery-thumb">
+          <div class="gallery-badges">
+            <span class="gallery-badge">${item.area}</span>
+            <span class="gallery-badge">${item.format}</span>
+          </div>
+        </div>
+        <div class="gallery-body">
+          <div class="gallery-title">${item.title}</div>
+          <p class="gallery-subtitle">${item.subtitle}</p>
+        </div>
+      `;
+      card.addEventListener('click', () => openGalleryModal(index));
+      galleryGrid.appendChild(card);
+    });
+  };
+
+  const openGalleryModal = (index) => {
+    if (!galleryModal) return;
+    const item = currentList[index];
+    if (!item) return;
+    currentIndex = index;
+    if (galleryTitle) galleryTitle.textContent = item.title;
+    if (galleryArea) galleryArea.textContent = item.area;
+    if (galleryLayout) galleryLayout.textContent = item.layout;
+    if (galleryBullets) {
+      galleryBullets.innerHTML = '';
+      item.bullets.forEach(text => {
+        const li = document.createElement('li');
+        li.textContent = text;
+        galleryBullets.appendChild(li);
+      });
+    }
+    galleryModal.classList.add('open');
+    galleryModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  };
+
+  const closeGallery = () => {
+    if (!galleryModal) return;
+    galleryModal.classList.remove('open');
+    galleryModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  };
+
+  const showGalleryByOffset = (delta) => {
+    if (currentList.length === 0) return;
+    let next = currentIndex + delta;
+    if (next < 0) next = currentList.length - 1;
+    if (next >= currentList.length) next = 0;
+    openGalleryModal(next);
+  };
+
+  if (galleryFilters) {
+    galleryFilters.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+      const filter = target.getAttribute('data-filter');
+      if (!filter) return;
+      galleryFilters.querySelectorAll('.gallery-chip').forEach(chip => chip.classList.remove('active'));
+      target.classList.add('active');
+      filterGallery(filter);
+      renderGallery();
+    });
+  }
+
+  if (closeGalleryModal) closeGalleryModal.addEventListener('click', closeGallery);
+  if (galleryModal) galleryModal.addEventListener('click', (event) => {
+    if (event.target === galleryModal) closeGallery();
+  });
+  if (galleryPrevBtn) galleryPrevBtn.addEventListener('click', () => showGalleryByOffset(-1));
+  if (galleryNextBtn) galleryNextBtn.addEventListener('click', () => showGalleryByOffset(1));
+  if (gallerySecondaryBtn) gallerySecondaryBtn.addEventListener('click', () => showToast('Откроем чат в WhatsApp/Telegram'));
+  if (galleryPrimaryBtn) galleryPrimaryBtn.addEventListener('click', () => closeGallery());
+
+  filterGallery('all');
+  renderGallery();
+
+  const quizFields = document.getElementById('quizFields');
+  const quizQuestion = document.getElementById('quizQuestion');
+  const quizStep = document.getElementById('quizStep');
+  const quizProgressBar = document.getElementById('quizProgressBar');
+  const quizProgressPercent = document.getElementById('quizProgressPercent');
+  const quizBackBtn = document.getElementById('quizBackBtn');
+  const quizNextBtn = document.getElementById('quizNextBtn');
+
+  const quizSteps = [
+    {
+      title: 'Что вы планируете?',
+      render: () => `
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="plan" value="open">
+            Открываю ПВЗ
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="plan" value="reequip">
+            Переоборудую действующий
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="plan" value="add">
+            Докупаю / доукомплектую
+          </label>
+        </div>
+      `,
+    },
+    {
+      title: 'Площадь помещения (м²)',
+      render: () => `
+        <input type="text" placeholder="Например, 24" style="width: 100%; padding: 12px 14px; border: 1px solid #e5e5e5; border-radius: 8px; font-size: 14px; font-family: inherit;">
+      `,
+    },
+    {
+      title: 'Планировка',
+      render: () => `
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="layout" value="square">
+            Квадрат
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="layout" value="corridor">
+            Узкое коридором
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="layout" value="complex">
+            Сложная
+          </label>
+        </div>
+      `,
+    },
+    {
+      title: 'Когда нужно поставить?',
+      render: () => `
+        <input type="text" placeholder="Например, через 2 недели" style="width: 100%; padding: 12px 14px; border: 1px solid #e5e5e5; border-radius: 8px; font-size: 14px; font-family: inherit;">
+      `,
+    },
+    {
+      title: 'Контакты для расчёта',
+      render: () => `
+        <div style="display: grid; gap: 12px;">
+          <input type="text" placeholder="Имя" style="width: 100%; padding: 12px 14px; border: 1px solid #e5e5e5; border-radius: 8px; font-size: 14px; font-family: inherit;">
+          <input type="tel" placeholder="Телефон *" style="width: 100%; padding: 12px 14px; border: 1px solid #e5e5e5; border-radius: 8px; font-size: 14px; font-family: inherit;">
+          <label style="display: flex; gap: 12px; font-size: 13px; color: #525252;">
+            <input type="checkbox" required style="width: 18px; height: 18px; margin-top: 2px;">
+            <span>Я даю согласие на обработку персональных данных</span>
+          </label>
+        </div>
+      `,
+    },
+  ];
+
+  let quizIndex = 0;
+
+  const renderQuizStep = () => {
+    if (!quizFields || !quizQuestion || !quizStep || !quizProgressBar || !quizProgressPercent || !quizNextBtn) return;
+    const step = quizSteps[quizIndex];
+    quizQuestion.textContent = step.title;
+    quizFields.innerHTML = step.render();
+    const total = quizSteps.length;
+    const percent = Math.round((quizIndex) / (total - 1) * 100);
+    quizProgressBar.style.width = `${percent}%`;
+    quizProgressPercent.textContent = `${percent}%`;
+    quizStep.textContent = `Шаг ${quizIndex + 1} из ${total}`;
+    quizBackBtn.style.visibility = quizIndex === 0 ? 'hidden' : 'visible';
+    quizNextBtn.textContent = quizIndex === total - 1 ? 'Получить расчёт' : 'Далее';
+  };
+
+  if (quizBackBtn) quizBackBtn.addEventListener('click', () => {
+    if (quizIndex > 0) {
+      quizIndex -= 1;
+      renderQuizStep();
+    }
+  });
+  if (quizNextBtn) quizNextBtn.addEventListener('click', () => {
+    if (quizIndex < quizSteps.length - 1) {
+      quizIndex += 1;
+      renderQuizStep();
+    } else {
+      showToast('Спасибо! Мы свяжемся с вами и пришлём расчёт.');
+    }
+  });
+
+  renderQuizStep();
+
+</script>
+
+</body>
+</html>
